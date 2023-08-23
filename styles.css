@@ -1,0 +1,244 @@
+:root {
+  --primary-color: #ffffff;
+  --main-color: #ae1332;
+  --card-text-black: #000;
+  --button-color: #a4cb66;
+  --button-color-2: #f5ce13;
+  --text-shadow: 0px 4px 70px rgba(0, 0, 0, 0.1);
+}
+*,
+::before,
+::after {
+  box-sizing: border-box;
+}
+body {
+  font-family: DM Sans, sans-serif;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+  color: var(--primary-color);
+  letter-spacing: -0.04em;
+}
+@keyframes pulseCustom {
+  0% {
+    transform: scaleZ(1);
+  }
+  50% {
+    transform: scale3d(1.05, 1.05, 1.05);
+  }
+  100% {
+    transform: scaleZ(1);
+  }
+}
+
+section {
+  padding-bottom: 80px;
+  background-color: var(--main-color);
+  width: 1280px;
+  height: 5469px;
+  padding-top: 150px;
+}
+.container {
+  display: flex;
+  width: 1216px;
+  flex-direction: column;
+  align-items: center;
+  gap: 44px;
+  margin-left: 255px;
+}
+h2 {
+  font-weight: 500;
+  line-height: 1;
+  text-shadow: var(--text-shadow);
+  color: #fff;
+  text-align: center;
+  font-family: DM Sans;
+  font-size: 40px;
+  font-style: normal;
+  line-height: 44px; /* 110% */
+  letter-spacing: -1.6px;
+  text-transform: uppercase;
+}
+.line-description {
+  text-align: center;
+  margin-bottom: 44px;
+  color: #fff;
+  font-family: DM Sans;
+  font-style: normal;
+  letter-spacing: -0.56px;
+}
+p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  text-shadow: var(--text-shadow);
+}
+.list {
+  list-style: none;
+}
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.line-item:nth-child(1).element-show {
+  animation: pulseCustom 0.7s ease-in-out;
+}
+.line-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  width: 389px;
+  height: 128px;
+  flex-shrink: 0;
+  padding: 20px;
+  border-radius: 20px;
+  background: var(--primary-color);
+}
+.line-item:nth-child(1) .line-item-number {
+  background-color: var(--main-color);
+}
+.line-item-number {
+  min-width: 136px;
+  height: 48px;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+  text-align: center;
+  line-height: 48px;
+  color: var(--primary-color);
+  border-radius: 200px;
+}
+.line-item-description {
+  color: var(--card-text-black);
+}
+.line-item:nth-child(1).element-show {
+  animation: pulseCustom 0.7s ease-in-out;
+}
+.line-item:nth-child(2) .line-item-number {
+  background-color: var(--button-color);
+}
+.line-item:nth-child(2).element-show {
+  animation: pulseCustom 0.7s ease-in-out 0.7s;
+}
+.line-item:nth-child(3).element-show {
+  animation: pulseCustom 0.7s ease-in-out 1.4s;
+}
+.line-item:nth-child(3) .line-item-number {
+  background-color: var(--button-color-2);
+}
+.line-title {
+  margin: 0 auto 14px;
+}
+img {
+  overflow-clip-margin: content-box;
+  overflow: clip;
+  display: block;
+  max-width: 100%;
+}
+.line-image {
+  background: url(<path-to-image>),
+    lightgray 0px -2.437px / 100% 101.864% no-repeat;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 0 0;
+  border-radius: 20px;
+}
+/*media styles*/
+@media screen and (min-width: 1280px) {
+  section {
+    padding-bottom: 150px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .container {
+    max-width: 1280px;
+  }
+}
+
+@media screen and (min-width: 1280px) {
+  .line-list {
+    display: flex;
+    gap: 24px;
+    margin-bottom: 81px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .line-item {
+    width: 389px;
+    padding: 40px 20px;
+    margin: 0 auto;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .line-item:not(:last-child) .line-item-description {
+    display: inline-block;
+    width: 166px;
+  }
+}
+@media screen and (min-width: 1280px) {
+  .line-item .line-item-description {
+    display: inline-block;
+    width: 166px;
+  }
+}
+/*media styles*/
+
+@media screen and (min-width: 768px) {
+  .section {
+    padding-bottom: 144px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (min-width: 768px) {
+  h2 {
+    font-size: 40px;
+    line-height: 1.1;
+  }
+}
+@media screen and (min-width: 768px) {
+  .line-description {
+    display: block;
+    width: 509px;
+    margin: 0 auto 44px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .line-list {
+    margin-bottom: 80px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 1279px) {
+  .line-item:not(:last-child) {
+    margin-bottom: 24px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .line-item {
+    max-width: 389px;
+    height: 128px;
+    padding: 40px 20px;
+    margin: 0 auto;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .line-title {
+    display: block;
+    width: 642px;
+  }
+}
